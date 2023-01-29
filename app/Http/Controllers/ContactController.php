@@ -15,10 +15,13 @@ class ContactController extends Controller
             'email' => 'required|email',
             'message' => 'required'
         ]);
+        $data['message'] = strip_tags($data['message']);
 
-        Mail::send('emails.contact', $data, function($message) use ($data) {
+        Mail::raw($data['message'], function($message) use ($data) {
             $message->from($data['email'], $data['name']);
             $message->to('h.htataung@icloud.com')->subject($data['subject']);
         });
+
+        return redirect()->back()->with('success', 'Message sent successfully!');
     }
 }
