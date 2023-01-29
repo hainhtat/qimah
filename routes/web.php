@@ -36,3 +36,5 @@ Route::get('/contact', function () {
 });
 
 Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
+
+Route::get('/language/{locale}', [LanguageController::class, 'change'])->name('language.change');
