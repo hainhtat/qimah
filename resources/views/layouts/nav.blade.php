@@ -3,7 +3,7 @@
 
     <a href="" class="logo d-flex align-items-center">
         
-        <img src="assets/img/logoNew.png" class="logo d-flex align-items-center">
+        <img src="{{asset('assets/img/logoNew.png')}}" class="logo d-flex align-items-center">
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
