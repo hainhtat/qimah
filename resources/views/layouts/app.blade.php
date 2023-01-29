@@ -22,6 +22,7 @@
     <link href="{{asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
+
     <!-- Template Main CSS File -->
     <link href="{{asset('assets/css/main.css')}}" rel="stylesheet">
 
@@ -36,7 +37,7 @@
 
         @yield('content')
     </main><!-- End #main -->
-    
+
     <!-- ======= Footer ======= -->
     @include('layouts.footer')
 
@@ -46,7 +47,10 @@
     <script src="{{asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
     <script src="{{asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
     <script src="{{asset('assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
-    <!-- <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script> -->
+    <script>
+        let action = "{{ url('/contact/submit') }}";
+    </script>
+    <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
