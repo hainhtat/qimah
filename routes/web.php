@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,4 @@ Route::get('/contact', function () {
     return view('emails.contact');
 });
 
-Route::post('/contact/submit', [ContactController::class, 'submit']);
+Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
